@@ -1,0 +1,1 @@
+scp -r * root@elver.org:/var/www

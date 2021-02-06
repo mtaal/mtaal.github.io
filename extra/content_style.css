@@ -1,0 +1,151 @@
+BODY
+{
+	BACKGROUND-COLOR: #ffffff;
+	COLOR: #333333;
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 8pt;
+	FONT-WEIGHT: normal;
+}
+
+A
+{
+	COLOR: #000000;
+	FONT-FAMILY: Verdana;
+	FONT-WEIGHT: plain;
+	TEXT-DECORATION:none;
+}
+
+A:hover 
+{
+	color:#cc2222;
+	TEXT-DECORATION: underline;
+}
+
+.subnav
+{
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 8pt;
+	FONT-WEIGHT: bold;
+	TEXT-DECORATION:none;
+	LINK: #000000;
+}
+
+.scroll
+{
+	scrollbar-face-color: #074784; 
+	scrollbar-shadow-color: #032544; 
+	scrollbar-highlight-color: #00000; 
+	scrollbar-3dlight-color: #000000; 
+	scrollbar-darkshadow-color: #000000; 
+	scrollbar-track-color: #AFAEAE; 
+	scrollbar-arrow-color: #FFFFFF; 	
+}
+
+.textbox 
+{ 
+	background: transparent; 
+	background-color: #FFFFFF; 
+	border: 1px solid #252560; 
+	color: #000000; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 10px; 
+	text-align: left; 
+}
+
+.kop
+{
+	COLOR: #cc2222;
+	FONT-FAMILY: Verdana, Arial;
+	FONT-SIZE: 10pt;
+	FONT-WEIGHT: bold;
+}
+
+.kopje
+{
+	COLOR: #cc2222;
+	FONT-FAMILY: Verdana, Arial;
+	FONT-SIZE: 10pt;
+	FONT-WEIGHT: bold;
+}
+
+.footer
+{
+	COLOR: #CCCCCC;
+	FONT-SIZE: 8pt;
+	FONT-WEIGHT: plain;
+; text-align: right
+; vertical-align: middle
+}
+
+.nieuws
+{
+	COLOR: #000000;
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 10pt;
+	FONT-WEIGHT: plain;
+}
+
+.uitleg
+{
+	COLOR: #000000;
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 8pt;
+	FONT-WEIGHT: plain;
+}
+
+.smalluitleg
+{
+	COLOR: #000000;
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 6pt;
+	FONT-WEIGHT: plain;
+}
+
+.nav
+{
+	COLOR: #ffffff;
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 8pt;
+	FONT-WEIGHT: plain;
+}
+
+
+.tabel
+{
+	border-width:  1;
+	border-color: #252560;
+; font-size: 8pt
+; border: 1 #252560 solid
+; background-image: url(../gfx/_orange.gif)
+}
+
+.background
+{
+;
+background-image: url(../gfx/_orange.gif)
+}
+
+a 
+ { 
+	COLOR: #CC2222;
+	TEXT-DECORATION:none;
+ } .code {  font-size: 8pt; background-color: #CCCCFF}
+
+p 
+{
+	COLOR: #333333;
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12pt;
+	FONT-WEIGHT: normal;
+	TEXT-DECORATION:none;
+}
+
+h1 { COLOR: #CC2222; FONT-FAMILY: Verdana; FONT-SIZE: 12pt; FONT-WEIGHT: bold; ; margin-top: 20px}
+h3 { COLOR: #FFFFFF; FONT-FAMILY: Verdana; FONT-SIZE: 9pt; FONT-WEIGHT: bold; TEXT-DECORATION:none; ; background-color: #333333; padding-left: 10px; padding-top: 3px; padding-bottom: 3px ; margin-bottom: 10px; width: 100%}
+h2 { COLOR: #CC2222; FONT-FAMILY: Verdana; FONT-SIZE: 10pt; FONT-WEIGHT: bold; TEXT-DECORATION:none; ; clip:  rect(  0px ); margin-bottom: -16px; margin-top: 20px}
+li { COLOR: #333333; FONT-FAMILY: Verdana; FONT-SIZE: 12pt; FONT-WEIGHT: normal; TEXT-DECORATION:none; }
+h4 { COLOR: #CC2222; FONT-FAMILY: Verdana; FONT-SIZE: 14pt; FONT-WEIGHT: bold; TEXT-DECORATION:none; ; clip: rect( 0px ); margin-bottom: -16px}
+h5 { COLOR: #CC2222; FONT-FAMILY: Verdana; FONT-SIZE: 8pt; FONT-WEIGHT: bold; TEXT-DECORATION:none; ; clip: rect( 0px ); margin-bottom: -18px; margin-top: 20px ; margin-left: 8px}
+.form { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #333333}
+h6 { COLOR: #CC2222; FONT-FAMILY: Verdana; FONT-SIZE: 10pt; FONT-WEIGHT: bold; TEXT-DECORATION:none; ; clip: rect( 0px )}
