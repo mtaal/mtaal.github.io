@@ -37,8 +37,8 @@
 
     <!-- ── HERO ─────────────────────────────── -->
     <section id="hero">
+      <div class="section-banner"><img src="" alt=""></div>
       <div class="section-inner">
-         <div class="section-banner"><img src="banners/banner_zeelandbrug.jpg" alt=""></div>
         <div class="section-header">
           <h1>Martin Taal</h1>
           <p class="lead">Independent consultant &mdash; Springsite</p>
@@ -69,8 +69,8 @@
 
     <!-- ── ERP EXPERTISE ─────────────────────── -->
     <section id="expertise">
+      <div class="section-banner"><img src="" alt=""></div>
       <div class="section-inner">
-         <div class="section-banner"><img src="banners/banner_varen.jpg" alt=""></div>
         <div class="section-header">
           <h2>ERP Architecture Expertise</h2>
           <p class="lead">Technical depth and functional breadth across the full ERP stack</p>
@@ -111,8 +111,8 @@
 
     <!-- ── AI & ERP ───────────────────────────── -->
     <section id="ai-erp">
+      <div class="section-banner"><img src="" alt=""></div>
       <div class="section-inner">
-         <div class="section-banner"><img src="banners/banner_bloembollen.jpg" alt=""></div>
         <div class="section-header">
           <h2>AI &amp; ERP &mdash; The Cutting Edge</h2>
           <p class="lead">Where agentic AI meets deterministic ERP transaction logic</p>
@@ -165,8 +165,8 @@
 
     <!-- ── ECLIPSE / EMF ─────────────────────── -->
     <section id="eclipse-emf">
+      <div class="section-banner"><img src="" alt=""></div>
       <div class="section-inner">
-         <div class="section-banner"><img src="banners/banner_masten.jpg" alt=""></div>
         <div class="section-header">
           <h2>Eclipse &amp; EMF &mdash; Open Source Roots</h2>
           <p class="lead">Committer and project lead in the Eclipse Modeling Framework ecosystem</p>
@@ -211,8 +211,8 @@
 
     <!-- ── ABOUT ─────────────────────────────── -->
     <section id="about">
+      <div class="section-banner"><img src="" alt=""></div>
       <div class="section-inner">
-         <div class="section-banner"><img src="banners/banner_koeien.jpg" alt=""></div>
         <div class="section-header">
           <h2>About &amp; Global Reach</h2>
           <p class="lead">Independent practice, remote-first, serving clients across all regions and time zones</p>
@@ -252,8 +252,8 @@
 
     <!-- ── CONTACT ───────────────────────────── -->
     <section id="contact">
+      <div class="section-banner"><img src="" alt=""></div>
       <div class="section-inner">
-         <div class="section-banner"><img src="banners/banner_bolders.jpg" alt=""></div>
         <div class="section-header">
           <h2>Contact</h2>
           <p class="lead">Get in touch to discuss your project or engagement</p>
@@ -304,6 +304,34 @@
 
 <script>
 (function() {
+  var banners = [
+    'banners/banner_basalt.jpg',
+    'banners/banner_bloembollen.jpg',
+    'banners/banner_bolders.jpg',
+    'banners/banner_bos.jpg',
+    'banners/banner_bottles.jpg',
+    'banners/banner_delta.jpg',
+    'banners/banner_fietswielen.jpg',
+    'banners/banner_gallerij.jpg',
+    'banners/banner_gevallenboom.jpg',
+    'banners/banner_gevlochtenriet.jpg',
+    'banners/banner_koeien.jpg',
+    'banners/banner_masten.jpg',
+    'banners/banner_narcissen.jpg',
+    'banners/banner_stammen.jpg',
+    'banners/banner_varen.jpg',
+    'banners/banner_zeelandbrug.jpg',
+    'banners/banner_zeilen.jpg',
+    'banners/banner_zweefvliegtuig.jpg'
+  ];
+  for (var i = banners.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = banners[i]; banners[i] = banners[j]; banners[j] = tmp;
+  }
+  document.querySelectorAll('.section-banner img').forEach(function(img, idx) {
+    img.src = banners[idx % banners.length];
+  });
+
   var sections = document.querySelectorAll('section[id]');
   var navLinks = document.querySelectorAll('.sidebar-nav a[href^="#"]');
   function setActive(id) {
