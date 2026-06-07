@@ -97,7 +97,7 @@ hr.sdiv {
 
 /* ── SECTION BANNER (full-bleed strip above section-inner) ── */
 .section-banner { line-height: 0; }
-.section-banner img { display: block; width: 100%; height: 68px; object-fit: cover; object-position: top; }
+.section-banner img { display: block; width: 100%; height: 68px; object-fit: cover; object-position: left top; }
 
 /* ── SECTIONS ── */
 section { scroll-margin-top: 0; }
