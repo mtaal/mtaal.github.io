@@ -1,0 +1,255 @@
+/* Option A — Fixed left sidebar, separate pages */
+:root {
+  --accent:      #CC2222;
+  --text:        #333333;
+  --bg:          #FFFFFF;
+  --black:       #404040;
+  --subtle:      #FAFAFA;
+  --footer-text: #CCCCCC;
+  --font: Verdana, Arial, sans-serif;
+  --sidebar-w: 210px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 14px; scroll-behavior: smooth; }
+body { font-family: var(--font); color: var(--text); background: var(--bg); }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+p { line-height: 1.8; margin-bottom: 14px; }
+p:last-child { margin-bottom: 0; }
+ul { padding-left: 1.4em; }
+li { font-size: 0.95rem; margin-bottom: 5px; line-height: 1.65; }
+
+/* ── SIDEBAR ── */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  width: var(--sidebar-w);
+  height: 100vh;
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  padding: 28px 22px;
+  overflow-y: auto;
+  z-index: 200;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.sidebar-logo img { height: 20px; width: auto; opacity: 0.9; }
+
+.sidebar-brand {
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.sidebar-who {
+  color: #FFFFFF;
+  font-size: 0.82rem;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.sidebar-role {
+  color: #777777;
+  font-size: 0.73rem;
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+
+hr.sdiv {
+  border: none;
+  border-top: 1px solid #555555;
+  margin: 0 0 18px;
+}
+
+.sidebar-nav { list-style: none; flex: 1; margin-bottom: 24px; }
+.sidebar-nav li { margin-bottom: 1px; }
+.sidebar-nav a {
+  display: block;
+  color: #BBBBBB;
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  border-radius: 3px;
+  transition: background 0.12s, color 0.12s;
+}
+.sidebar-nav a:hover { background: #555555; color: var(--accent); text-decoration: none; }
+.sidebar-nav a.active { color: var(--accent); }
+
+.sidebar-contact {
+  color: #666666;
+  font-size: 0.71rem;
+  line-height: 1.75;
+  font-style: normal;
+}
+.sidebar-contact a { color: var(--accent); font-size: 0.71rem; }
+
+/* ── MAIN ── */
+.main-wrap {
+  margin-left: var(--sidebar-w);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+  padding: 40px 64px 52px;
+  max-width: 920px;
+}
+
+/* ── PAGE BANNER ── */
+.page-banner { line-height: 0; }
+.page-banner img { display: block; width: 100%; height: 68px; object-fit: cover; object-position: top; }
+
+/* ── PAGE HEADER ── */
+.page-header { margin-bottom: 36px; }
+.page-header h1 {
+  font-size: 2rem;
+  color: var(--text);
+  font-weight: bold;
+  line-height: 1.2;
+  border-left: 5px solid var(--accent);
+  padding-left: 16px;
+}
+.page-header h2 {
+  font-size: 1.6rem;
+  color: var(--text);
+  font-weight: bold;
+  line-height: 1.2;
+  border-left: 5px solid var(--accent);
+  padding-left: 16px;
+}
+.page-header .lead {
+  color: #666666;
+  font-size: 0.88rem;
+  margin-top: 10px;
+  padding-left: 21px;
+}
+
+/* ── HERO ── */
+.hero-name { font-size: 2.6rem; color: var(--accent); font-weight: bold; margin-bottom: 10px; }
+.hero-tag  { font-size: 1.1rem; font-weight: bold; max-width: 560px; margin-bottom: 20px; }
+.hero-sub  { font-size: 0.9rem; color: #555555; max-width: 580px; }
+
+/* ── SECTION SUBHEADINGS ── */
+h3.sub {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+/* ── TWO COLUMN ── */
+.two-col {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 48px;
+  margin-top: 24px;
+}
+
+.callout {
+  background: #F5F5F5;
+  border-left: 4px solid var(--accent);
+  padding: 20px 22px;
+  align-self: start;
+}
+.callout p { font-size: 0.87rem; margin-bottom: 8px; }
+.callout p:first-child { font-weight: bold; color: var(--accent); margin-bottom: 12px; }
+
+/* ── CARDS ── */
+.card-stack { display: flex; flex-direction: column; gap: 16px; }
+
+.card {
+  background: var(--subtle);
+  border: 1px solid #DDDDDD;
+  border-top: 3px solid var(--accent);
+  padding: 16px 18px;
+}
+.card h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 8px; }
+.card p  { font-size: 0.87rem; margin-bottom: 0; }
+
+/* ── LOCATION GRID ── */
+.locations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 28px;
+}
+.loc-card {
+  background: var(--subtle);
+  border-top: 3px solid var(--accent);
+  padding: 18px;
+}
+.loc-card h3 { font-size: 0.9rem; font-weight: bold; margin-bottom: 8px; }
+.loc-card p  { font-size: 0.85rem; margin-bottom: 0; }
+.status {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── CONTACT ── */
+.contact-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; margin-top: 28px; }
+.clabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #888888;
+  margin-top: 18px;
+  margin-bottom: 3px;
+}
+.clabel:first-child { margin-top: 0; }
+.cdetails p { font-size: 0.95rem; margin-bottom: 0; }
+.cnote p { font-size: 0.9rem; color: #555555; margin-bottom: 14px; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--black);
+  color: var(--footer-text);
+  font-size: 0.78rem;
+  text-align: right;
+  padding: 8px 20px;
+}
+footer a { color: var(--footer-text); }
+footer a:hover { color: var(--accent); text-decoration: none; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .two-col, .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+  .locations { grid-template-columns: repeat(2, 1fr); }
+  .page-content { padding: 36px 32px; }
+}
+
+@media (max-width: 680px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 14px;
+    gap: 0;
+  }
+  .sidebar-who, .sidebar-role, .sidebar-contact, hr.sdiv { display: none; }
+  .sidebar-logo { margin-bottom: 0; margin-right: 16px; }
+  .sidebar-nav { display: flex; flex-wrap: wrap; gap: 2px; flex: 1; margin-bottom: 0; }
+  .sidebar-nav a { line-height: 2; padding: 0 8px; font-size: 0.73rem; }
+  .main-wrap { margin-left: 0; }
+  .page-content { padding: 24px 16px; }
+  .locations { grid-template-columns: 1fr; }
+}
